@@ -6,7 +6,7 @@ function Header() {
   return (
     <header>
       <nav className="navbar navbar-expand-sm fixed-top navbar-light bg-light">
-        <Link className="navbar-brand" to="/">
+        <Link className="chateasy navbar-brand" to="/">
           ChatEasy
         </Link>
         <button

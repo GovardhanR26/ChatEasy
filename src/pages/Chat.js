@@ -118,8 +118,8 @@ export default class Chat extends Component {
             Send
           </button>
         </form>
-        <div className="py-5 mx-3">
-          Login in as:{" "}
+        <div className="current-user-details py-5 mx-3">
+          Logged in as:{" "}
           <strong className="text-info">{this.state.user.email}</strong>
         </div>
       </div>

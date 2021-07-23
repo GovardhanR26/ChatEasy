@@ -8,7 +8,7 @@ export default class Login extends Component {
     this.state = {
       error: null,
       email: "",
-      password: ""
+      password: "",
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -18,7 +18,7 @@ export default class Login extends Component {
 
   handleChange(event) {
     this.setState({
-      [event.target.name]: event.target.value
+      [event.target.name]: event.target.value,
     });
   }
 
@@ -50,7 +50,7 @@ export default class Login extends Component {
 
   render() {
     return (
-      <div className="container">
+      <div className="login-container container">
         <form
           className="mt-5 py-5 px-5"
           autoComplete="off"
@@ -58,8 +58,8 @@ export default class Login extends Component {
         >
           <h1>
             Login to
-            <Link className="title ml-2" to="/">
-              Chatty
+            <Link className="chateasy title ml-2" to="/">
+              ChatEasy
             </Link>
           </h1>
           <p className="lead">
@@ -89,13 +89,23 @@ export default class Login extends Component {
             {this.state.error ? (
               <p className="text-danger">{this.state.error}</p>
             ) : null}
-            <button className="btn btn-primary px-5" type="submit">Login</button>
+            <button className="btn btn-primary px-5" type="submit">
+              Login
+            </button>
           </div>
           <p>You can also log in with any of these services</p>
-          <button className="btn btn-danger mr-2" type="button" onClick={this.googleSignIn}>
+          <button
+            className="btn btn-danger mr-2"
+            type="button"
+            onClick={this.googleSignIn}
+          >
             Sign in with Google
           </button>
-          <button className="btn btn-secondary" type="button" onClick={this.githubSignIn}>
+          <button
+            className="btn btn-secondary"
+            type="button"
+            onClick={this.githubSignIn}
+          >
             Sign in with GitHub
           </button>
           <hr />
@@ -103,7 +113,6 @@ export default class Login extends Component {
             Don't have an account? <Link to="/signup">Sign up</Link>
           </p>
         </form>
-
       </div>
     );
   }
